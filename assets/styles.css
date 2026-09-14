@@ -153,6 +153,95 @@ h3 { margin: 0; font-size: clamp(1.4rem, 2.4vw, 1.95rem); font-weight: 650; }
 .publication-box { padding: 2rem; border: 1px solid var(--line); border-radius: var(--radius); background: var(--surface); }
 .back-link { font-weight: 700; }
 
+/* Minimal one-page portfolio */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  width: 100%;
+  min-height: 3.5rem;
+  justify-content: center;
+  background: rgba(255, 255, 255, .76);
+  border-bottom: 1px solid rgba(0, 0, 0, .08);
+  backdrop-filter: saturate(180%) blur(18px);
+  -webkit-backdrop-filter: saturate(180%) blur(18px);
+}
+.site-header nav { width: min(1180px, calc(100% - 3rem)); justify-content: flex-end; }
+.site-header nav a { color: #424245; font-size: .82rem; font-weight: 500; }
+.site-header nav a[aria-current="page"] { color: var(--ink); font-weight: 650; }
+.hero {
+  min-height: calc(100svh - 3.5rem);
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  padding: 0;
+  align-items: stretch;
+}
+.portrait-frame { aspect-ratio: auto; min-height: 680px; border-radius: 0; box-shadow: none; }
+.portrait { object-position: 50% 46%; }
+.hero-copy {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: clamp(4rem, 8vw, 8.5rem);
+  background: #fff;
+}
+.hello { margin: 0 0 2rem; font-size: clamp(1.1rem, 1.5vw, 1.35rem); font-weight: 600; }
+.intro {
+  max-width: 15ch;
+  margin: 0;
+  color: var(--ink);
+  font-size: clamp(1.9rem, 3.25vw, 3.35rem);
+  font-weight: 600;
+  line-height: 1.12;
+  letter-spacing: -.04em;
+}
+.availability {
+  max-width: 35rem;
+  margin: 2rem 0 0;
+  padding-left: 1rem;
+  color: #515154;
+  border-left: 3px solid #0071e3;
+  font-size: clamp(.98rem, 1.25vw, 1.1rem);
+}
+.profile-links { display: flex; flex-wrap: wrap; gap: .75rem 1.5rem; margin-top: 2.25rem; }
+.profile-links a { color: #0066cc; font-size: .95rem; font-weight: 600; text-decoration: none; }
+.profile-links a:hover { text-decoration: underline; }
+.research-section { padding: clamp(6rem, 12vw, 11rem) 1.5rem; background: #f2eee7; }
+.research-inner { width: min(1120px, 100%); margin-inline: auto; }
+.research-heading { display: flex; justify-content: space-between; align-items: end; gap: 3rem; margin-bottom: 3rem; }
+.section-label { margin: 0; color: #6e6255; font-size: .78rem; font-weight: 700; letter-spacing: .09em; text-transform: uppercase; }
+.research-heading h1 { max-width: none; font-size: clamp(2rem, 4vw, 3.6rem); }
+.research-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+.research-card {
+  min-height: 330px;
+  display: flex;
+  flex-direction: column;
+  padding: clamp(1.5rem, 3vw, 2.25rem);
+  color: var(--ink);
+  background: rgba(255, 255, 255, .72);
+  border: 1px solid rgba(74, 58, 43, .1);
+  border-radius: 1.5rem;
+  text-decoration: none;
+  box-shadow: 0 8px 28px rgba(74, 58, 43, .05);
+  transition: transform .2s ease, background .2s ease;
+}
+.research-card:hover { color: var(--ink); background: #fff; transform: translateY(-4px); }
+.research-card h2 { max-width: 13ch; margin-top: auto; font-size: clamp(1.35rem, 2vw, 1.85rem); }
+.research-card .project-number { color: #74695e; }
+.card-action { margin-top: 1.5rem; color: #0066cc; font-size: .9rem; font-weight: 600; }
+.minimal-footer {
+  min-height: 7rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  padding-inline: max(1.5rem, calc((100% - 1120px) / 2));
+  color: var(--muted);
+  background: #fff;
+  font-size: .82rem;
+}
+.minimal-footer a { color: inherit; }
+
 @media (max-width: 760px) {
   .hero, .project-card, .section-heading, .split-section, .about-section, .teaching, .case-layout, .compact-project-grid, .highlights-strip { grid-template-columns: 1fr; }
   .hero { min-height: auto; }
@@ -161,5 +250,14 @@ h3 { margin: 0; font-size: clamp(1.4rem, 2.4vw, 1.95rem); font-weight: 650; }
   .fact-grid { grid-template-columns: 1fr 1fr; }
   h1 { font-size: clamp(2.3rem, 11vw, 3.4rem); }
   .home-section-heading { align-items: start; flex-direction: column; }
+  .site-header nav { width: calc(100% - 2rem); justify-content: center; }
+  .hero { min-height: auto; grid-template-columns: 1fr; }
+  .portrait-frame { width: 100%; min-height: auto; aspect-ratio: 4 / 5; }
+  .hero-copy { padding: 4rem 1.5rem 5rem; }
+  .intro { max-width: 18ch; font-size: clamp(1.85rem, 9vw, 2.65rem); }
+  .research-heading { display: block; }
+  .research-heading h1 { margin-top: .75rem; }
+  .research-grid { grid-template-columns: 1fr; }
+  .research-card { min-height: 250px; }
 }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
