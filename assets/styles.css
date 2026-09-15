@@ -187,13 +187,13 @@ h3 { margin: 0; font-size: clamp(1.4rem, 2.4vw, 1.95rem); font-weight: 650; }
 }
 .hello { margin: 0 0 2rem; font-size: clamp(1.1rem, 1.5vw, 1.35rem); font-weight: 600; }
 .intro {
-  max-width: 15ch;
+  max-width: 34rem;
   margin: 0;
   color: var(--ink);
-  font-size: clamp(1.9rem, 3.25vw, 3.35rem);
-  font-weight: 600;
-  line-height: 1.12;
-  letter-spacing: -.04em;
+  font-size: clamp(1.2rem, 1.7vw, 1.5rem);
+  font-weight: 500;
+  line-height: 1.45;
+  letter-spacing: -.015em;
 }
 .availability {
   max-width: 35rem;
@@ -207,6 +207,7 @@ h3 { margin: 0; font-size: clamp(1.4rem, 2.4vw, 1.95rem); font-weight: 650; }
 .profile-links a { color: #0066cc; font-size: .95rem; font-weight: 600; text-decoration: none; }
 .profile-links a:hover { text-decoration: underline; }
 .research-section { padding: clamp(6rem, 12vw, 11rem) 1.5rem; background: #f2eee7; }
+.research-page .research-section { min-height: calc(100svh - 10.5rem); }
 .research-inner { width: min(1120px, 100%); margin-inline: auto; }
 .research-heading { display: flex; justify-content: space-between; align-items: end; gap: 3rem; margin-bottom: 3rem; }
 .section-label { margin: 0; color: #6e6255; font-size: .78rem; font-weight: 700; letter-spacing: .09em; text-transform: uppercase; }
@@ -254,7 +255,7 @@ h3 { margin: 0; font-size: clamp(1.4rem, 2.4vw, 1.95rem); font-weight: 650; }
   .hero { min-height: auto; grid-template-columns: 1fr; }
   .portrait-frame { width: 100%; min-height: auto; aspect-ratio: 4 / 5; }
   .hero-copy { padding: 4rem 1.5rem 5rem; }
-  .intro { max-width: 18ch; font-size: clamp(1.85rem, 9vw, 2.65rem); }
+  .intro { max-width: 34rem; font-size: 1.2rem; }
   .research-heading { display: block; }
   .research-heading h1 { margin-top: .75rem; }
   .research-grid { grid-template-columns: 1fr; }
