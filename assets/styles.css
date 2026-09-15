@@ -293,13 +293,14 @@ h3 { margin: 0; font-size: clamp(1.4rem, 2.4vw, 1.95rem); font-weight: 650; }
 }
 .case-study { width: min(1180px, calc(100% - 3rem)); margin-inline: auto; padding-bottom: 4rem; }
 .case-hero { display: grid; grid-template-columns: 1.04fr .96fr; gap: clamp(2.5rem, 5vw, 5rem); align-items: center; padding: 1.5rem 0 2.75rem; }
-.case-heading h1 { max-width: 720px; font-size: clamp(1.45rem, 2.15vw, 2.2rem); font-weight: 570; line-height: 1.2; letter-spacing: -.025em; }
+.case-heading h1 { max-width: 720px; font-size: clamp(1.35rem, 1.8vw, 1.85rem); font-weight: 550; line-height: 1.24; letter-spacing: -.018em; }
 .case-role, .case-label { margin: 0 0 .7rem; color: #6e5546; font-size: .74rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
 .case-deck { max-width: 660px; margin: 1.25rem 0; color: #57534f; font-size: clamp(1rem, 1.25vw, 1.13rem); line-height: 1.58; }
 .publication-link { color: #5b3a29; font-size: .9rem; font-weight: 650; }
 .case-links { display: flex; flex-wrap: wrap; gap: .65rem 1.25rem; }
 .documentary-hero { margin: 0; overflow: hidden; background: #f8f6f2; border: 1px solid rgba(91,58,41,.11); border-radius: 1.25rem; }
 .documentary-hero > img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; }
+.portrait-evidence > img { object-position: center 12%; }
 .documentary-hero figcaption, .evidence-wide figcaption, .evidence-triptych figcaption, .object-gallery figcaption { padding: .7rem .85rem; color: #716a64; font-size: .74rem; line-height: 1.35; }
 .object-pair { display: grid; grid-template-columns: 1fr 1fr; }
 .object-pair > img { aspect-ratio: 1; object-fit: cover; }
@@ -311,10 +312,21 @@ h3 { margin: 0; font-size: clamp(1.4rem, 2.4vw, 1.95rem); font-weight: 650; }
 .case-facts dd { margin: .25rem 0 0; font-size: .93rem; line-height: 1.4; }
 .case-section { padding: clamp(2.8rem, 5vw, 4.5rem) 0; border-bottom: 1px solid var(--line); }
 .case-section h2 { max-width: 760px; font-size: clamp(1.35rem, 2.2vw, 2rem); font-weight: 550; line-height: 1.22; }
+.case-label { display: inline-flex; align-items: center; gap: .48rem; }
+.case-label::before { display: inline-grid; width: 1.45rem; height: 1.45rem; place-items: center; color: #5b3a29; background: #f4eee7; border: 1px solid rgba(91,58,41,.15); border-radius: 50%; font-size: .75rem; line-height: 1; }
+.label-challenge::before { content: "◇"; }
+.label-focus::before { content: "?"; font-weight: 700; }
+.label-approach::before { content: "↗"; }
+.label-insights::before { content: "✦"; }
+.label-outcome::before { content: "✓"; }
 .case-overview { display: grid; grid-template-columns: .85fr 1.15fr; gap: 2rem 5rem; align-items: start; }
 .case-overview > p { margin: 1.7rem 0 0; color: #57534f; }
 .role-note { grid-column: 1 / -1; display: grid; grid-template-columns: 8rem 1fr; gap: 1rem; padding: 1.1rem 1.25rem; background: #f7f3ee; border-radius: 1rem; font-size: .92rem; }
 .role-note strong { font-weight: 650; }
+.study-focus h2 { max-width: 700px; }
+.question-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; margin-top: 1.6rem; }
+.question-grid p { margin: 0; padding: 1.2rem 1.3rem; color: #55504c; background: #f8f6f2; border-left: 3px solid #8e6d58; border-radius: 0 .9rem .9rem 0; font-size: .94rem; line-height: 1.55; }
+.section-intro { max-width: 760px; margin: .9rem 0 0; color: #625d59; font-size: .94rem; }
 .method-flow, .insight-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-top: 1.75rem; }
 .method-flow div, .insight-grid article { padding: 1.35rem; background: #f8f6f2; border: 1px solid rgba(91,58,41,.09); border-radius: 1.15rem; }
 .method-flow strong { display: block; margin-bottom: .45rem; color: #5b3a29; font-size: .9rem; font-weight: 650; }
@@ -373,6 +385,7 @@ h3 { margin: 0; font-size: clamp(1.4rem, 2.4vw, 1.95rem); font-weight: 650; }
   .case-facts div:nth-child(2) { border-right: 0; }
   .case-facts div:nth-child(-n+2) { border-bottom: 1px solid var(--line); }
   .method-flow, .insight-grid { grid-template-columns: 1fr; }
+  .question-grid { grid-template-columns: 1fr; }
   .sequence-flow::before { top: 1.5rem; bottom: 1.5rem; left: 1.62rem; right: auto; width: 1px; height: auto; }
   .evidence-wide { grid-template-columns: 1fr; }
   .evidence-wide figcaption { max-width: none; }
