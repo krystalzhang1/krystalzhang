@@ -340,9 +340,14 @@ h3 { margin: 0; font-size: clamp(1.4rem, 2.4vw, 1.95rem); font-weight: 650; }
 .insight-grid article > span { color: #9a806f; font-size: .7rem; font-weight: 700; }
 .insight-grid h3 { margin-top: .55rem; font-size: 1.08rem; font-weight: 600; line-height: 1.3; letter-spacing: -.012em; }
 .insight-grid p { margin: .7rem 0 0; color: #625d59; font-size: .9rem; line-height: 1.55; }
-.evidence-wide { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: end; margin: 2rem 0 0; overflow: hidden; background: var(--case-card); border: 1px solid var(--case-border); border-radius: 1rem; }
-.evidence-wide img { width: 100%; height: min(44vw, 520px); padding: 1rem; object-fit: contain; background: #fff; }
-.evidence-wide figcaption { max-width: 17rem; }
+.evidence-wide { display: block; width: min(820px, 100%); margin: 2rem auto 0; overflow: hidden; background: var(--case-card); border: 1px solid var(--case-border); border-radius: 1rem; }
+.evidence-wide img { display: block; width: 100%; height: auto; object-fit: contain; background: #fff; }
+.evidence-wide figcaption { max-width: none; text-align: center; }
+.workshop-hero { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .55rem; padding: .55rem; background: #fff; }
+.workshop-hero > img { width: 100%; height: auto; aspect-ratio: 4 / 3; padding: 0; object-fit: cover; }
+.workshop-gallery { width: min(860px, 100%); grid-template-columns: repeat(2, minmax(0, 1fr)); margin-inline: auto; }
+.workshop-gallery img { aspect-ratio: 4 / 3; object-fit: cover; }
+.centered-note { width: min(860px, 100%); margin-inline: auto; text-align: center; }
 .evidence-triptych { display: grid; grid-template-columns: repeat(3, 1fr); gap: .8rem; margin-top: 2rem; }
 .evidence-triptych figure, .object-gallery figure { margin: 0; overflow: hidden; background: var(--case-card); border: 1px solid var(--case-border); border-radius: 1rem; }
 .evidence-triptych img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; }
@@ -390,9 +395,7 @@ h3 { margin: 0; font-size: clamp(1.4rem, 2.4vw, 1.95rem); font-weight: 650; }
   .method-flow, .insight-grid { grid-template-columns: 1fr; }
   .question-grid { grid-template-columns: 1fr; }
   .sequence-flow::before { top: 1.5rem; bottom: 1.5rem; left: 1.62rem; right: auto; width: 1px; height: auto; }
-  .evidence-wide { grid-template-columns: 1fr; }
-  .evidence-wide img { height: min(80vw, 420px); }
-  .evidence-wide figcaption { max-width: none; }
+  .workshop-hero { grid-template-columns: 1fr; }
   .evidence-triptych { grid-template-columns: 1fr; }
   .object-gallery { grid-template-columns: 1fr 1fr; }
   .guidance-list div { grid-template-columns: 1fr; gap: .25rem; }
