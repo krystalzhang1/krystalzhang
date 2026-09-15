@@ -4,9 +4,9 @@
   --ink: #1d1d1f;
   --muted: #6e6e73;
   --line: #d2d2d7;
-  --terracotta: #0066cc;
+  --terracotta: #5b3a29;
   --sage: #e8f0e4;
-  --blue: #0071e3;
+  --blue: #5b3a29;
   --radius: 1.75rem;
   --shadow: 0 12px 36px rgba(0, 0, 0, .07);
   --sans: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
@@ -201,11 +201,12 @@ h3 { margin: 0; font-size: clamp(1.4rem, 2.4vw, 1.95rem); font-weight: 650; }
   margin: 2rem 0 0;
   padding-left: 1rem;
   color: #515154;
-  border-left: 3px solid #0071e3;
+  border-left: 3px solid #5b3a29;
   font-size: clamp(.98rem, 1.25vw, 1.1rem);
 }
 .profile-links { display: flex; flex-wrap: wrap; gap: .75rem 1.5rem; margin-top: 2.25rem; }
-.profile-links a { color: #0066cc; font-size: .95rem; font-weight: 600; text-decoration: none; }
+.profile-links a { display: inline-flex; align-items: center; gap: .48rem; color: #5b3a29; font-size: .95rem; font-weight: 600; text-decoration: none; }
+.profile-links svg { width: 1.08rem; height: 1.08rem; flex: 0 0 auto; fill: currentColor; }
 .profile-links a:hover { text-decoration: underline; }
 .research-section { padding: clamp(6rem, 12vw, 11rem) 1.5rem; background: #f2eee7; }
 .research-page .research-section { min-height: calc(100svh - 10.5rem); }
